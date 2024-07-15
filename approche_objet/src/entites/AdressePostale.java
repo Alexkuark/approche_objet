@@ -52,5 +52,12 @@ public class AdressePostale {
 	public AdressePostale(AdressePostale adresse) {
 		this(adresse.getNumRue(), adresse.getLibelleRue(), adresse.getCodePostal(), adresse.getVille());
 	}
+	
+	public String toString() {
+		return this.getNumRue() + " " + this.getLibelleRue() + ", " + this.getCodePostal() + " " + this.getVille();
+	}
+	
+	public void afficher() {
+		System.out.println(this);
 
 }

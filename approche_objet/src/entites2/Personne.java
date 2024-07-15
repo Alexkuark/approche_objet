@@ -52,6 +52,10 @@ public class Personne {
 		this(nom, prenom, new AdressePostale(numRue, libelleRue, codePostal, nomVille));
 	}
 	
+	public Personne(Personne personne) {
+		this(personne.getNom(), personne.getPrenom(), personne.getAdresse());
+	}
+	
 	public String toString() {
 		return this.getNom().toUpperCase() + " " + this.getPrenom();
 	}
