@@ -31,7 +31,7 @@ public class Personne {
 		this.adresse = adressePostale;
 	}
 	
-	public void setAdresse(int numRue, String libelleRue, int codePostal, String nomVille) {
+	public void setAdresse(int numRue, String libelleRue, String codePostal, String nomVille) {
 		this.setAdresse(new AdressePostale(numRue, libelleRue, codePostal, nomVille));
 	}
 	
@@ -48,7 +48,7 @@ public class Personne {
 		this.setAdresse(adressePostale);
 	}
 	
-	public Personne(String nom, String prenom, int numRue, String libelleRue, int codePostal, String nomVille) {
+	public Personne(String nom, String prenom, int numRue, String libelleRue, String codePostal, String nomVille) {
 		this.setNom(nom);
 		this.setPrenom(prenom);
 		this.setAdresse(new AdressePostale(numRue, libelleRue, codePostal, nomVille));
