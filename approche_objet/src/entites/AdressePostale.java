@@ -4,7 +4,7 @@ public class AdressePostale {
 	
 	protected int numRue;
 	protected String libelleRue;
-	protected String codePostal;
+	protected int codePostal;
 	protected String ville;
 	
 	public int getNumRue() {
@@ -15,7 +15,7 @@ public class AdressePostale {
 		return libelleRue;
 	}
 	
-	public String getCodePostal() {
+	public int getCodePostal() {
 		return codePostal;
 	}
 	
@@ -31,7 +31,7 @@ public class AdressePostale {
 		this.libelleRue = libelleRue;
 	}
 	
-	public void setCodePostal(String codePostal) {
+	public void setCodePostal(int codePostal) {
 		this.codePostal = codePostal;
 	}
 	
@@ -41,11 +41,18 @@ public class AdressePostale {
 
 	public AdressePostale() {}
 	
-	public AdressePostale(int numRue, String libelleRue, String codePostal, String nomVille) {
-		this.numRue = numRue;
-		this.libelleRue = libelleRue;
-		this.codePostal = codePostal;
-		this.ville = nomVille;
+	public AdressePostale(int numRue, String libelleRue, int codePostal, String nomVille) {
+		this.setNumRue(numRue);
+		this.setLibelleRue(libelleRue);
+		this.setCodePostal(codePostal);
+		this.setVille(nomVille);
+	}
+	
+	public AdressePostale(AdressePostale adresse) {
+		this.setNumRue(adresse.getNumRue());
+		this.setLibelleRue(adresse.getLibelleRue());
+		this.setCodePostal(adresse.getCodePostal());
+		this.setVille(adresse.getVille());
 	}
 
 }
