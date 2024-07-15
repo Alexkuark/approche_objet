@@ -59,5 +59,6 @@ public class AdressePostale {
 	
 	public void afficher() {
 		System.out.println(this);
+	}
 
 }
