@@ -53,5 +53,13 @@ public class Personne {
 		this.setPrenom(prenom);
 		this.setAdresse(new AdressePostale(numRue, libelleRue, codePostal, nomVille));
 	}
+	
+	public String toString() {
+		return nom.toUpperCase() + " " + prenom;
+	}
+	
+	public void afficher() {
+		System.out.println(this);
+	}
 
 }
