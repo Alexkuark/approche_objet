@@ -55,7 +55,7 @@ public class Personne {
 	}
 	
 	public String toString() {
-		return nom.toUpperCase() + " " + prenom;
+		return this.getNom().toUpperCase() + " " + this.getPrenom();
 	}
 	
 	public void afficher() {
