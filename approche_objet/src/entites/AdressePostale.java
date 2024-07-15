@@ -42,6 +42,7 @@ public class AdressePostale {
 	public AdressePostale() {}
 	
 	public AdressePostale(int numRue, String libelleRue, String codePostal, String nomVille) {
+		this();
 		this.setNumRue(numRue);
 		this.setLibelleRue(libelleRue);
 		this.setCodePostal(codePostal);
@@ -49,10 +50,7 @@ public class AdressePostale {
 	}
 	
 	public AdressePostale(AdressePostale adresse) {
-		this.setNumRue(adresse.getNumRue());
-		this.setLibelleRue(adresse.getLibelleRue());
-		this.setCodePostal(adresse.getCodePostal());
-		this.setVille(adresse.getVille());
+		this(adresse.getNumRue(), adresse.getLibelleRue(), adresse.getCodePostal(), adresse.getVille());
 	}
 
 }

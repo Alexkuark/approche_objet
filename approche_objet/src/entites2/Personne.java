@@ -38,20 +38,18 @@ public class Personne {
 	public Personne() {}
 	
 	public Personne(String nom, String prenom) {
+		this();
 		this.setNom(nom);
 		this.setPrenom(prenom);
 	}
 	
 	public Personne(String nom, String prenom, AdressePostale adressePostale) {
-		this.setNom(nom);
-		this.setPrenom(prenom);
+		this(nom, prenom);
 		this.setAdresse(adressePostale);
 	}
 	
 	public Personne(String nom, String prenom, int numRue, String libelleRue, String codePostal, String nomVille) {
-		this.setNom(nom);
-		this.setPrenom(prenom);
-		this.setAdresse(new AdressePostale(numRue, libelleRue, codePostal, nomVille));
+		this(nom, prenom, new AdressePostale(numRue, libelleRue, codePostal, nomVille));
 	}
 	
 	public String toString() {
