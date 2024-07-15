@@ -37,6 +37,11 @@ public class Personne {
 	
 	public Personne() {}
 	
+	public Personne(String nom, String prenom) {
+		this.setNom(nom);
+		this.setPrenom(prenom);
+	}
+	
 	public Personne(String nom, String prenom, AdressePostale adressePostale) {
 		this.setNom(nom);
 		this.setPrenom(prenom);
