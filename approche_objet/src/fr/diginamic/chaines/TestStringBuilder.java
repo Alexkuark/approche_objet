@@ -20,7 +20,7 @@ public class TestStringBuilder {
 		debut = System.currentTimeMillis();
 
 		for(int i=1; i<=100000; i++) {
-			chaine2.concat(""+i);
+			chaine2.concat(String.valueOf(i));
 		}
 		
 		fin = System.currentTimeMillis();
