@@ -24,9 +24,7 @@ public class LivretA extends Compte {
 		this.taux = taux;
 	}
 	
-	public LivretA() {
-		super();
-	}
+	public LivretA() {}
 	
 	public LivretA(String numero, double montant, double taux) {
 		super(numero, montant);
