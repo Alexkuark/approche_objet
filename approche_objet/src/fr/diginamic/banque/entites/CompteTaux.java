@@ -1,6 +1,8 @@
 package fr.diginamic.banque.entites;
 
-public class LivretA extends CompteTaux {
+public class CompteTaux extends Compte {
+	
+	protected double taux;
 	
 	public String getNumCompte() {
 		return super.getNumCompte();
@@ -19,13 +21,18 @@ public class LivretA extends CompteTaux {
 	}
 	
 	public void setTaux(double taux) {
-		super.setTaux(taux);;
+		this.taux = taux;
 	}
 	
-	public LivretA() {}
+	public CompteTaux() {}
 	
-	public LivretA(String numero, double montant, double taux) {
-		super(numero, montant, taux);
+	public CompteTaux(String numero, double montant, double taux) {
+		super(numero, montant);
+		this.setTaux(taux);
+	}
+	
+	public String toString() {
+		return super.toString() + "\nTaux : " + this.getTaux();
 	}
 
 }
