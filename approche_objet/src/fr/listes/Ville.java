@@ -1,9 +1,12 @@
 package fr.listes;
 
-public class Ville {
+import fr.enumeration.Continent;
+
+public class Ville implements Comparable<Ville> {
 	
 	protected String nom;
 	protected int nbHabitants;
+	protected Continent continent;
 	
 	public Ville() {}
 	
@@ -23,13 +26,24 @@ public class Ville {
 		this.nbHabitants = population;
 	}
 	
+	private Continent getContinent() {
+		return this.continent;
+	}
+
+	
 	public Ville(String nom, int population) {
 		this.setNom(nom);
 		this.setNbHabitants(population);
 	}
 	
+	public Ville(String nom, int population, Continent continent) {
+		this.setNom(nom);
+		this.setNbHabitants(population);
+		this.continent = continent;
+	}
+	
 	public String toString() {
-		return this.getNom() + "\nPopulation : " + this.getNbHabitants() + " habitants";
+		return this.getNom() + " (" + this.getContinent() + ")\nPopulation : " + this.getNbHabitants() + " habitants";
 	}
 	
 	public boolean equals(Object another) {
@@ -40,6 +54,20 @@ public class Ville {
 		else {
 			return false;
 		}
+	}
+
+	@Override
+	public int compareTo(Ville o) {
+		if (this.nbHabitants > o.getNbHabitants()) {
+			return 1;
+		}
+		else if (this.nbHabitants < o.getNbHabitants()) {
+			return -1;
+		}
+		else {
+			return 0;
+		}
+		
 	}
 
 }

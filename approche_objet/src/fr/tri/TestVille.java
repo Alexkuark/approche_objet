@@ -2,7 +2,7 @@ package fr.tri;
 
 import java.util.ArrayList;
 
-import fr.tri.Ville;
+import fr.listes.Ville;
 
 public class TestVille {
 
