@@ -53,7 +53,7 @@ public class Personne {
 	}
 	
 	public Personne(Personne personne) {
-		this(personne.getNom(), personne.getPrenom(), personne.getAdresse());
+		this(personne.getNom(), personne.getPrenom(), new AdressePostale(personne.getAdresse()));
 	}
 	
 	public String toString() {

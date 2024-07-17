@@ -28,6 +28,10 @@ public class Ville {
 		this.setNbHabitants(population);
 	}
 	
+	public String toString() {
+		return this.getNom() + "\nPopulation : " + this.getNbHabitants() + " habitants";
+	}
+	
 	public boolean equals(Object another) {
 		if(another instanceof Ville) {
 			Ville otherVille = (Ville) another;
